@@ -27,8 +27,6 @@ void szyfrowanie(FILE* f, FILE* s) {
 int main() {
 	char nazwa_wejscia[L], nazwa_wyjscia[L];
 
-	char x = 'c';
-
 	FILE* plik_wejsciowy, * plik_wyjsciowy;
 
 	printf("Podaj nazwe pliku z danymi: ");
