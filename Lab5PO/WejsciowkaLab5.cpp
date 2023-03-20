@@ -7,13 +7,26 @@
 #include <math.h>
 
 int bin2int(char* t) {
-    int result = 0;
-    while (*t != '\0') {
-        result = result * 2 + (*t - '0');
-        t++;
+    int liczba = 0;
+    int dlugosc = (int)strlen(t);
+    int potega = dlugosc - 2;
+    for (int i = 0; i < dlugosc; i++)
+    {
+        if (t[i] == '1')
+        {
+            int temp = (int)pow(2, potega);
+            liczba += temp;
+            potega--;
+        }
+        else
+        {
+            potega--;
+        }
     }
-    return result;
+    
+    return liczba;
 }
+
 
 void wypisz_tab(char** tab, int n) {
     for (int i = 0; i < n; i++) {
@@ -59,7 +72,6 @@ int main() {
     int itab = 0;
     while (fgets(tab[itab], n, fp) != NULL) {
         itab++;
-        
         if (itab == m) {
             break;
         }
