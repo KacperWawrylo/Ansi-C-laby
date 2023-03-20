@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1d2a8ae8-7e7e-4f1f-af9a-b73d9b9871c4}</ProjectGuid>
-    <RootNamespace>AnsiC</RootNamespace>
+    <ProjectGuid>{016d876f-f8b0-4f67-bc53-7e5bea47c160}</ProjectGuid>
+    <RootNamespace>Lab5PO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="WejsciowkaLab4.cpp" />
+    <ClCompile Include="WejsciowkaLab5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
