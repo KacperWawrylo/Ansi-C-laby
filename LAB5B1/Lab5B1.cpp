@@ -9,7 +9,46 @@ struct student {
 	char nazwisko[40];
 	char imie[40];
 	double punkty;
+	struct student* nast;
 };
+
+struct student* lista_dynamiczna(char* plik) {
+	FILE* f = fopen(plik, "r");
+	if (f == NULL) {
+		exit(0);
+	}
+	struct student* head = NULL;
+	while (!feof(f)) {
+		struct student* wsk = (struct student*)malloc(sizeof(struct student));
+		if (fscanf(f, "%d %s %s %lf", &wsk->nr_ID, wsk->nazwisko, wsk->imie, &wsk->punkty) == 4) {
+			wsk->nast = head;
+			head = wsk;
+		}
+		else {
+			free(wsk);
+			break;
+		}
+	}
+	fclose(f);
+	return head;
+}
+
+void print_records(struct student* head) {
+	struct student* current = head;
+	while (current != NULL) {
+		printf("%d %s %s %.2f\n", current->nr_ID, current->nazwisko, current->imie, current->punkty);
+		current = current->nast;
+	}
+}
+
+void free_records(struct student* head) {
+	struct student* current = head;
+	while (current != NULL) {
+		struct student* next = current->nast;
+		free(current);
+		current = next;
+	}
+}
 
 int policz_wiersze(FILE* f) {
 	int licznik = 0;
@@ -97,6 +136,11 @@ int main() {
 	}
 
 	fclose(fp);
+
+
+	struct student* head = lista_dynamiczna(tab);
+	print_records(head);
+	free_records(head);
 
 	system("pause");
 	return 0;
