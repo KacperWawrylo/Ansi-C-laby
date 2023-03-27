@@ -108,6 +108,8 @@ int main() {
 	zapis_do_pliku(poczatek_nazwy, lista1, '2');
 	zapis_do_pliku(poczatek_nazwy, lista1, '3');
 	zapis_do_pliku(poczatek_nazwy, lista1, '4');
+
+
 	system("pause");
 	return 0;
 }
