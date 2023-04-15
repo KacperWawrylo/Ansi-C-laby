@@ -1,0 +1,15 @@
+2023-04-16 00:42:07: Pobranie nicku oraz liczby.
+2023-04-16 00:47:46: Pobranie nicku.
+2023-04-16 00:47:48: Pobranie liczby.
+2023-04-16 00:47:55: Wylosowanie litery.
+2023-04-16 00:47:55: Poprawne wcisniecie.
+2023-04-16 00:47:55: Wylosowanie litery.
+2023-04-16 00:47:57: Poprawne wcisniecie.
+2023-04-16 00:47:57: Wylosowanie litery.
+2023-04-16 00:47:57: Poprawne wcisniecie.
+2023-04-16 00:48:14: Pobranie nicku.
+2023-04-16 00:48:15: Pobranie liczby.
+2023-04-16 00:48:17: Wylosowanie litery.
+2023-04-16 00:48:18: Poprawne wcisniecie.
+2023-04-16 00:48:18: Wylosowanie litery.
+2023-04-16 00:48:19: Nieprawidlowe wcisniecie.

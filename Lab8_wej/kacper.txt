@@ -1,0 +1,4 @@
+czas : 3.00 ilosc trafien : 4
+czas : 3.00 ilosc trafien : 4
+czas : 2.00 ilosc trafien : 3
+czas : 2.00 ilosc trafien : 1
