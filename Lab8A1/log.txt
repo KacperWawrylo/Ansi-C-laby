@@ -1,0 +1,19 @@
+17.04.2023 14:32:57 Start programu
+17.04.2023 14:33:04 podanie nicku, gracz: kacper
+17.04.2023 14:33:06 podanie liczby, gracz: kacper
+17.04.2023 14:33:06 Rozpoczêcie gry, gracz: kacper
+17.04.2023 14:33:32 Zakonczenie gry, gracz: kacper
+17.04.2023 14:37:37 Start programu
+17.04.2023 14:37:39 Podanie nicku, gracz: stacho
+17.04.2023 14:37:41 Podanie liczby, gracz: stacho
+17.04.2023 14:37:41 Rozpoczêcie gry, gracz: stacho
+17.04.2023 14:37:44 Zakonczenie gry, gracz: stacho
+17.04.2023 14:37:50 Start programu
+17.04.2023 14:37:52 Podanie nicku, gracz: daniel
+17.04.2023 14:37:56 Podanie liczby, gracz: daniel
+17.04.2023 14:37:56 Rozpoczêcie gry, gracz: daniel
+17.04.2023 14:37:57 Zakonczenie gry, gracz: daniel
+17.04.2023 14:38:02 Podanie nicku, gracz: stacho
+17.04.2023 14:38:10 Podanie liczby, gracz: stacho
+17.04.2023 14:38:10 Rozpoczêcie gry, gracz: stacho
+17.04.2023 14:38:11 Zakonczenie gry, gracz: stacho
