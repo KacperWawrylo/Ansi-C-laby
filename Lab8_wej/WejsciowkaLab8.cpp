@@ -66,6 +66,7 @@ int main(int argc, char* argv[]) {
 		while (getchar() != '\n')
 			;
 	}
+
 	start = time(NULL);
 	for (int i = 0; i < liczba; i++) {
 		int n = rand() % 26 + 97;
