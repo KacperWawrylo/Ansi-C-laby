@@ -38,6 +38,8 @@ public:
     }
 
     void print() {
+        this->x2 = x1 + b;
+        this->y2 = y2;
         cout << "Wspolrzedne pierwszego wierzcholka: (" << x1 << ", " << y1 << ")\n";
         //cout << "Wspolrzedne drugiego wierzcholka: (" << this->x2 << ", " << this->y2 << ")\n";
         printf("Wspolrzedne drugiego wierzcholka: (%.2lf,%.2lf)\n", x2, y2);
@@ -58,7 +60,7 @@ public:
     }
 
     void symetria_osiowa(double n) {
-        x1 = 2 * n - x1;
+        x1 = 2 * n - x1 - b;
     }
 };
 
