@@ -12,7 +12,7 @@ using namespace std;
 class Prostokat {
 private:
 	double x1, y1, a, b; // a podstawa b wysokosc
-public : 
+public:
 	void set(double x, double y, double a_, double b_) {
 		if (x <= 0) {
 			printf("Zla dlugosc x, ustawiam domyslna 1\n");
@@ -64,7 +64,7 @@ public :
 };
 
 class Trojkat {
-private: 
+private:
 	double x1, y1, a, b; // a jeden bok przyprostokatny z ox, b drugi bok przyprostokatny z oy
 public:
 	void set(double x, double y, double a_, double b_) {
