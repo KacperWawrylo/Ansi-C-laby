@@ -56,14 +56,14 @@ public:
 		strcpy(email, mk.email);
 		nast = mk.nast;
 	}
-	 ~osoba_na_uczelni() {
+	~osoba_na_uczelni() {
 		delete nast;
 	}
 
-	 osoba_na_uczelni& operator+=(const osoba_na_uczelni& other) {
-		 strcat(imie, other.imie);
-		 return *this;
-	 }
+	osoba_na_uczelni& operator+=(const osoba_na_uczelni& other) {
+		strcat(imie, other.imie);
+		return *this;
+	}
 };
 
 class student : public osoba_na_uczelni {
@@ -145,104 +145,26 @@ public:
 		}
 	}
 };
-
 int main() {
-	osoba_na_uczelni* glowa = NULL;
-	char wybor = 't';
-	do {
-		printf("podaj co chcesz dodac. (s - student, p- pracownik)\n");
-		char o;
-		cin >> o;
-		if (o == 's') {
-			printf("podaj : imie, nazwisko, email, nr indeksu, rok rozpoczecia\n");
-			char imie[20];
-			char nazwisko[20];
-			char email[20];
-			int indeks;
-			int roz;
-			cin >> imie;
-			cin >> nazwisko;
-			cin >> email;
-			cin >> indeks;
-			cin >> roz;
-			if (indeks < 100000 || indeks > 999999 || roz > 2023 || roz < 2000) {
-				printf("domyslny konstruktor\n");
-				if (glowa == NULL) {
-					glowa = new student();
-				}
-				else {
-					osoba_na_uczelni* p = glowa;
-					while (p->nast != NULL) {
-						p = p->nast;
-					}
-					p->nast = new student();
-				}
-			}
-			else {
-				if (glowa == NULL) {
-					glowa = new student(imie, nazwisko, email, indeks, roz);
-				}
-				else {
-					osoba_na_uczelni* p = glowa;
-					while (p->nast != NULL) {
-						p = p->nast;
-					}
-					p->nast = new student(imie, nazwisko, email, indeks, roz);
-				}
-			}
-		}
-		if (o == 'p') {
-			printf("podaj : imie, nazwisko, email, liczbe magistrantow, przedmioty\n");
-			char imie[20];
-			char nazwisko[20];
-			char email[20];
-			int liczb;
-			char tab[10][7] = {NULL};
-			cin >> imie;
-			cin >> nazwisko;
-			cin >> email;
-			cin >> liczb;
-			for (int i = 0; i < 10; i++) {
-				printf("podaj kod znakow przedmiotu %d\n: ", i + 1);
-				cin >> tab[i];
-				tab[i][6] = '\0';
-			}
-			if (liczb < 0 || liczb > 8) {
-				printf("domyslny konstruktor\n");
-				if (glowa == NULL) {
-					glowa = new pracownik();
-				}
-				else {
-					osoba_na_uczelni* p = glowa;
-					while (p->nast != NULL) {
-						p = p->nast;
-					}
-					p->nast = new pracownik();
-				}
-			}
-			else {
-				if (glowa == NULL) {
-					glowa = new pracownik(imie, nazwisko, email, liczb, tab);
-				}
-				else {
-					osoba_na_uczelni* p = glowa;
-					while (p->nast != NULL) {
-						p = p->nast;
-					}
-					p->nast = new pracownik(imie, nazwisko, email, liczb, tab);
-				}
-			}
-		}
-		printf("chcesz dodac jeszcze ? t - tak, n-nie\n");
-		cin >> wybor;
-	} while (wybor != 'n');
-	osoba_na_uczelni* p = glowa;
-	while (p != NULL) {
-		p->wypisz();
-		p = p->nast;
+	osoba_na_uczelni* lista[5];
+
+	lista[0] = new osoba_na_uczelni("Jan", "Kowalski", "jan.kowalski@example.com");
+	lista[1] = new osoba_na_uczelni("Anna", "Nowak", "anna.nowak@example.com");
+	lista[2] = new student("Adam", "Smith", "adam.smith@example.com", 123456, 2019);
+	lista[3] = new student("Maria", "Johnson", "maria.johnson@example.com", 654321, 2020);
+	lista[4] = new student("Robert", "Brown", "robert.brown@example.com", 987654, 2021);
+
+	osoba_na_uczelni suma;
+	for (int i = 0; i < 5; i++) {
+		suma += *lista[i];
 	}
-	
-	delete glowa;
+
+	suma.wypisz();
+
+	for (int i = 0; i < 5; i++) {
+		delete lista[i];
+	}
+
 	system("pause");
 	return 0;
 }
